@@ -21,16 +21,16 @@ spec:
         app: test-svc-5
     spec:
       containers:
-      - image: harbor.idp-poc.tremolo.dev/test-svc-5/mypython:XXXXXX
+      - image: harbor.idp-poc.tremolo.dev/test-svc-5/mypython:4f1f7fc
         imagePullPolicy: Always
         name: test-svc-5
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-      imagePullSecrets:
-      - name: pull-secret
       dnsPolicy: ClusterFirst
       imagePullSecret: pull-secret
+      imagePullSecrets:
+      - name: pull-secret
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
